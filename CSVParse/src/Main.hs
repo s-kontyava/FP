@@ -1,13 +1,14 @@
-data User = User { firstName :: String
-                 , lastName  :: String
-                 , email     :: String
+data User = User { firstName 
+                 , lastName 
+                 , email :: String
                  }
+changeEmail :: User -> String -> User
+changeEmail user newEmail = user { email = newEmail }
 
-main = putStrLn $ firstName user ++ " " ++
-                  lastName user ++ ", " ++
-                  email user
-
-       where user = User { firstName = "Sergey"
-                   ,lastName  = "Kontyava"
-                   , email    = "iisquideii@gmail.com"
-                  }
+main =           
+       let userWithNewEmail = changeEmail user "s.kontyava@gmail.com"
+       in putStrLn $ email userWithNewEmail
+       where user = User {  firstName = "Sergey"
+                          , lastName = "Kontyava"
+                          , email    = "iisquideii@gmail.com"
+                         }
