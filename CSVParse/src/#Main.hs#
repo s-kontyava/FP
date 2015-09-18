@@ -1,0 +1,8 @@
+
+divide:: Double -> Double -> Double
+divide arg1 arg2 = arg1 / arg2
+
+main = 
+     let tempFunc = divide 10.03
+     in 
+     print (tempFunc 2.1)
